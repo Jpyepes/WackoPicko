@@ -11,6 +11,7 @@ jobs:
            with:
              args: skims scan ./config.yaml
          - name: Archive production artifacts
+           if: always()
            uses: actions/upload-artifact@v4
            with:
                 name: dist-without-markdown
